@@ -1,0 +1,38 @@
+.nav-pills .nav-link.active {
+    color: black;
+    background-color: pink;
+}
+html {
+	font-size: 12px;
+  }
+
+
+ul {
+  list-style: circle inside; }
+
+li {
+    margin-bottom: 1rem; }
+
+.circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* Change this to your desired font family */
+  font-size: 15px; /* Change this to your desired font size */
+}
+
+.card-title {
+  font-family: "Montserrat", sans-serif; /* Change this to your desired font family */
+  font-size: 20px; /* Change this to your desired font size */
+  color: #f8f9fa;
+}
+
+.year-slider {
+  margin-bottom: 20px;
+}
+
