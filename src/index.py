@@ -1,4 +1,4 @@
-from app import app_dash
+from src.app import app_dash
 
 server = app_dash.server
 # Expose the app_dash server for deployment
