@@ -11,7 +11,13 @@ mapbox_access_token = 'pk.eyJ1IjoiZGl5YW5haGFsaW0iLCJhIjoiY2txY2xxcjdjMDUzMjJ2cG
 
 # Load dataset with only the required columns
 # data_path = os.path.join(os.path.dirname(__file__), 'data/Clean Sexual Harassment NY.csv')
-df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['PD_DESC', 'Lat_Lon', 'HOUR', 'year', 'BORO_NM', 'PREM_TYP_DESC'])
+
+# df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['PD_DESC', 'Lat_Lon', 'HOUR', 'year', 'BORO_NM', 'PREM_TYP_DESC'])
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+csv_file_path = os.path.join(BASE_DIR, 'data', 'Clean Sexual Harassment NY.csv')
+
+# Load the CSV file
+df = pd.read_csv(csv_file_path, usecols=['PD_DESC', 'Lat_Lon', 'HOUR', 'year', 'BORO_NM', 'PREM_TYP_DESC'])
 
 # Define colors for the legend
 legend_colors = {
