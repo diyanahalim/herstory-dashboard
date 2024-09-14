@@ -10,7 +10,7 @@ from app import app_dash
 # Import the dataset with only the necessary columns
 # Construct path relative to the src directory
 # data_path = os.path.join(os.path.dirname(__file__), 'data/Clean Sexual Harassment NY.csv')
-df = pd.read_csv("src/data/Clean Sexual Harassment NY.csv", usecols=['year', 'suspector_sex_rand', 'suspector_age_rand', 'CMPLNT_NUM'])
+df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'suspector_sex_rand', 'suspector_age_rand', 'CMPLNT_NUM'])
 
 # Copy columns to new columns with clearer names
 df['Year'] = df['year']

@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 from app import app_dash
 
 # Step 2. Import the dataset, only loading required columns
-df = pd.read_csv("src/data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
+df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
 
 # Filter data to include only the years of interest
 years_of_interest = [1997, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017, 2019]
