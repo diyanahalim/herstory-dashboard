@@ -1,6 +1,6 @@
 
 from waitress import serve # Import the server directly
-from src.app import server
+from app import server
 
 # server = app_dash.server
 # Expose the app_dash server for deployment
