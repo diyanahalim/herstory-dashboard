@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import pandas as pd
 import os
-from app import app_dash
+from app import app
 
 # Mapbox token
 mapbox_access_token = 'pk.eyJ1IjoiZGl5YW5haGFsaW0iLCJhIjoiY2txY2xxcjdjMDUzMjJ2cGh5YW00MDJmNyJ9.0r-bJmKlKME-hlz2Al67SA'
@@ -121,7 +121,7 @@ layout = html.Div([
              dbc.Col(card_main, width={"size": 7})])
 ])
 
-@app_dash.callback(
+@app.callback(
     Output('graph', 'figure'),
     [Input('check_boroughs', 'value'),
      Input('year', 'value')]

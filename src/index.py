@@ -1,6 +1,6 @@
-from src.app import app_dash
+from app import app
 
-server = app_dash.server  # Expose the server for deployment
+server = app.server  # Expose the server for deployment
 
 if __name__ == "__main__":
-    app_dash.run_server(debug=False)
+    app.run_server(debug=False)

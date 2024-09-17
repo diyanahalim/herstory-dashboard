@@ -46,10 +46,10 @@ content = html.Div(id="page-content", style=CONTENT_STYLE)
 layout = html.Div([dcc.Location(id="url"), sidebar, content])
 
 # Import callback functions to avoid circular import issues
-from app import app_dash
+from app import app
 from dash.dependencies import Input, Output
 
-@app_dash.callback(Output("page-content", "children"), [Input("url", "pathname")])
+@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname in ["/", "/HerStory/Overview"]:
         return app1.layout

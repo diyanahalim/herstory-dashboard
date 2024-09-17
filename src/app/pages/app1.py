@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import os
 
-from app import app_dash
+from app import app
 
 # Step 2. Import the dataset, only loading required columns
 # df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
@@ -91,7 +91,7 @@ layout = html.Div([
 
 ])
 
-@app_dash.callback(
+@app.callback(
     [Output('card_1', 'children'), Output('card_2', 'children'), Output('card_3', 'children'), Output('hbar','figure'), Output('piechart','figure')],
     [Input('app-1-year-slider', 'value')])
 def update_figure(selected_year):

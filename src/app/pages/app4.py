@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 import os
 
-from app import app_dash
+from app import app
 
 # Import the dataset with the necessary columns
 # Construct path relative to the src directory
@@ -125,7 +125,7 @@ layout = html.Div([
              dbc.Col(table)])
 ])
 
-@app_dash.callback(
+@app.callback(
     [Output("card_morning", "children"), 
      Output("card_night", "children"), 
      Output("line_chart1", "figure"), 
@@ -198,7 +198,7 @@ def update_layout(selected_year):
 
     return card_1, card_2, fig6, location_of_year
 
-@app_dash.callback(
+@app.callback(
     Output('table_1', 'children'),
     [Input('select_year', 'value')],
     [Input('select_location', 'value')],

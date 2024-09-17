@@ -1,7 +1,7 @@
 from dash import html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
-from app import app_dash
+from app import app
 
 # Card Definitions
 card_1 = dbc.Card(
@@ -190,7 +190,7 @@ layout = html.Div([
     })
 
 # Optimized Callback for all collapses
-@app_dash.callback(
+@app.callback(
     Output("collapse-1", "is_open"),
     [Input("collapse-button-1", "n_clicks")],
     [State("collapse-1", "is_open")],
@@ -200,7 +200,7 @@ def toggle_collapse(n, is_open):
         return not is_open
     return is_open
 
-@app_dash.callback(
+@app.callback(
     Output("collapse-2", "is_open"),
     [Input("collapse-button-2", "n_clicks")],
     [State("collapse-2", "is_open")],
@@ -210,7 +210,7 @@ def toggle_collapse(n, is_open):
         return not is_open
     return is_open
 
-@app_dash.callback(
+@app.callback(
     Output("collapse-3", "is_open"),
     [Input("collapse-button-3", "n_clicks")],
     [State("collapse-3", "is_open")],
@@ -220,7 +220,7 @@ def toggle_collapse(n, is_open):
         return not is_open
     return is_open
 
-@app_dash.callback(
+@app.callback(
     Output("collapse-4", "is_open"),
     [Input("collapse-button-4", "n_clicks")],
     [State("collapse-4", "is_open")],
@@ -230,7 +230,7 @@ def toggle_collapse(n, is_open):
         return not is_open
     return is_open
 
-@app_dash.callback(
+@app.callback(
     Output("collapse-5", "is_open"),
     [Input("collapse-button-5", "n_clicks")],
     [State("collapse-5", "is_open")],
@@ -240,7 +240,7 @@ def toggle_collapse(n, is_open):
         return not is_open
     return is_open
 
-@app_dash.callback(
+@app.callback(
     Output("collapse-6", "is_open"),
     [Input("collapse-button-6", "n_clicks")],
     [State("collapse-6", "is_open")],

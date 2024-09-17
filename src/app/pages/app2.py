@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import os
 
-from app import app_dash
+from app import app
 
 # Import the dataset with only the necessary columns
 # Construct path relative to the src directory
@@ -113,7 +113,7 @@ layout = html.Div([
     dbc.Row([dcc.Graph(id='line_chart2')])
 ])
 
-@app_dash.callback(
+@app.callback(
     [Output("card_vic_female", "children"),
      Output("card_vic_total", "children"),
      Output("card_vic_male", "children"),
