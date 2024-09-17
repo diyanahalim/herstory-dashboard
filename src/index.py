@@ -1,4 +1,4 @@
-from src.app import app
+from app import app
 
 server = app.server  # Expose the server for deployment
 
