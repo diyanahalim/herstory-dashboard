@@ -8,13 +8,13 @@ import os
 from app import app
 
 # Step 2. Import the dataset, only loading required columns
-# df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
+df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
 # Construct the path to the CSV file
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-csv_file_path = os.path.join(BASE_DIR, 'data', 'Clean Sexual Harassment NY.csv')
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# csv_file_path = os.path.join(BASE_DIR, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file
-df = pd.read_csv(csv_file_path, usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
+# df = pd.read_csv(csv_file_path, usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
 
 # Filter data to include only the years of interest
 years_of_interest = [1997, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017, 2019]
