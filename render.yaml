@@ -3,6 +3,7 @@ services:
   - type: web
     name: abacus-laptop-shear-d3yd
     env: python
+    PYTHONPATH: src
     plan: free
     # A requirements.txt file must exist
     buildCommand: pip install -r requirements.txt
