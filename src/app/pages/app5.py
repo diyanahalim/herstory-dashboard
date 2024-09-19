@@ -13,8 +13,8 @@ mapbox_access_token = 'pk.eyJ1IjoiZGl5YW5haGFsaW0iLCJhIjoiY2txY2xxcjdjMDUzMjJ2cG
 # data_path = os.path.join(os.path.dirname(__file__), 'data/Clean Sexual Harassment NY.csv')
 
 # df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['PD_DESC', 'Lat_Lon', 'HOUR', 'year', 'BORO_NM', 'PREM_TYP_DESC'])
-# Get the absolute path to the project root directory (one level up from the current file)
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Get the absolute path to the project root directory (one level up from src/app)
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file

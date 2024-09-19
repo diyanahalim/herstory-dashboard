@@ -11,8 +11,8 @@ from app import app
 # df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
 # Construct the path to the CSV file
 # Get the absolute path to the CSV file
-# Get the absolute path to the project root directory (one level up from the current file)
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Get the absolute path to the project root directory (one level up from src/app)
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file
