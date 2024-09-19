@@ -10,12 +10,12 @@ from app import app
 # Import the dataset with only the necessary columns
 # Construct path relative to the src directory
 # data_path = os.path.join(os.path.dirname(__file__), 'data/Clean Sexual Harassment NY.csv')
-df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'suspector_sex_rand', 'suspector_age_rand', 'CMPLNT_NUM'])
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# csv_file_path = os.path.join(BASE_DIR, 'data', 'Clean Sexual Harassment NY.csv')
+# df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'suspector_sex_rand', 'suspector_age_rand', 'CMPLNT_NUM'])
+current_dir = os.path.dirname(os.path.abspath(__file__))
+csv_file_path = os.path.join(current_dir, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file
-# df = pd.read_csv(csv_file_path, usecols=['year', 'suspector_sex_rand', 'suspector_age_rand', 'CMPLNT_NUM'])
+df = pd.read_csv(csv_file_path, usecols=['year', 'suspector_sex_rand', 'suspector_age_rand', 'CMPLNT_NUM'])
 
 # Copy columns to new columns with clearer names
 df['Year'] = df['year']
