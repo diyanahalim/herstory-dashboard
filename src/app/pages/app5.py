@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import os
 from app import app
+from index import get_data  # Import the function to get the dataset
 
 # Mapbox token
 mapbox_access_token = 'pk.eyJ1IjoiZGl5YW5haGFsaW0iLCJhIjoiY2txY2xxcjdjMDUzMjJ2cGh5YW00MDJmNyJ9.0r-bJmKlKME-hlz2Al67SA'
@@ -18,7 +19,8 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
 csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file
-df = pd.read_csv(csv_file_path, usecols=['PD_DESC', 'Lat_Lon', 'HOUR', 'year', 'BORO_NM', 'PREM_TYP_DESC'])
+# df = pd.read_csv(csv_file_path, usecols=['PD_DESC', 'Lat_Lon', 'HOUR', 'year', 'BORO_NM', 'PREM_TYP_DESC'])
+df = get_data()  # Use the get_data function to get the pre-loaded dataset
 
 # Define colors for the legend
 legend_colors = {

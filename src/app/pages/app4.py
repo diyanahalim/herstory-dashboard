@@ -6,18 +6,18 @@ from dash.dependencies import Input, Output
 import os
 
 from app import app
-
+from index import get_data  # Import the function to get the dataset
 # Import the dataset with the necessary columns
 # Construct path relative to the src directory
 # data_path = os.path.join(os.path.dirname(__file__), 'data/Clean Sexual Harassment NY.csv')
 # df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['LOC_OF_OCCUR_DESC', 'HOUR', 'year', 'CMPLNT_NUM', 'PREM_TYP_DESC'])
 # df.columns = [col.strip() for col in list(df.columns)]
 # Get the absolute path to the project root directory (one level up from src/app)
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
+# project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+# csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file
-df = pd.read_csv(csv_file_path, usecols=['LOC_OF_OCCUR_DESC', 'HOUR', 'year', 'CMPLNT_NUM', 'PREM_TYP_DESC'])
+df = get_data()  # Use the get_data function to get the pre-loaded dataset
 df.columns = [col.strip() for col in list(df.columns)]
 
 df['Location'] = df['LOC_OF_OCCUR_DESC']

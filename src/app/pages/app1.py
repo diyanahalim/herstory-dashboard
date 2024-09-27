@@ -6,19 +6,21 @@ import plotly.graph_objects as go
 import os
 
 from app import app
+from index import get_data  # Import the function to get the dataset
 
 # Step 2. Import the dataset, only loading required columns
 # df = pd.read_csv("data/Clean Sexual Harassment NY.csv", usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
 # Construct the path to the CSV file
 # Get the absolute path to the CSV file
 # Get the absolute path to the project root directory (one level up from src/app)
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
+# project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+# csv_file_path = os.path.join(project_root, 'data', 'Clean Sexual Harassment NY.csv')
 
 # Load the CSV file
-df = pd.read_csv(csv_file_path, usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
+# df = pd.read_csv(csv_file_path, usecols=['year', 'PD_DESC', 'CMPLNT_NUM', 'BORO_NM'])
 
 # Filter data to include only the years of interest
+df = get_data()  # Use the get_data function to get the pre-loaded dataset
 years_of_interest = [1997, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017, 2019]
 df = df[df['year'].isin(years_of_interest)]
 
